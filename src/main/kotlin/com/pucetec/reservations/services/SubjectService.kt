@@ -40,4 +40,7 @@ class SubjectService(
         // Note: This is a placeholder implementation
         throw NotImplementedError("Not yet implemented")
     }
+
+    fun listSubjects(): List<SubjectResponse> =
+        subjectMapper.toResponseList(subjectRepository.findAll())
 }
